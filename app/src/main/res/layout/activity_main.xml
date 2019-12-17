@@ -6,44 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button_down"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:onClick="onClick"
-        android:text="down"
+    <ImageView
+        android:id="@+id/arrow_down"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/down_arrow" />
 
-    <Button
-        android:id="@+id/button_right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:onClick="onClick"
-        android:text="right"
-        app:layout_constraintBottom_toTopOf="@+id/button_down"
-        app:layout_constraintStart_toEndOf="@+id/button_down" />
+    <ImageView
+        android:id="@+id/arrow_left"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/arrow_down"
+        app:layout_constraintEnd_toStartOf="@+id/arrow_down"
+        app:srcCompat="@drawable/left_arrow" />
 
-    <Button
-        android:id="@+id/button_left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="left"
-        app:layout_constraintBottom_toTopOf="@+id/button_down"
-        app:layout_constraintEnd_toStartOf="@+id/button_down" />
+    <ImageView
+        android:id="@+id/arrow_up"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/arrow_left"
+        app:layout_constraintStart_toEndOf="@+id/arrow_left"
+        app:srcCompat="@drawable/up_arrow" />
 
-    <Button
-        android:id="@+id/button_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:onClick="onClick"
-        android:text="up"
-        app:layout_constraintBottom_toTopOf="@+id/button_right"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <ImageView
+        android:id="@+id/arrow_right"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/arrow_down"
+        app:layout_constraintStart_toEndOf="@+id/arrow_down"
+        app:srcCompat="@drawable/right_arrow" />
 </androidx.constraintlayout.widget.ConstraintLayout>
