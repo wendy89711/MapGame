@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -23,7 +24,8 @@ public class GameView extends View {
         Log.d("Game","onDraw"+getWidth()+","+getHeight());
         Paint paint0 = new Paint();
         Paint paint = new Paint();
-        paint0.setColor(0);
+        paint0.setColor(Color.rgb(204, 204, 255));
+        paint0.setStrokeWidth((float)15.0);
         canvas.drawLine(400,0,0,600,paint0);
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.lion);
         canvas.drawBitmap(bitmap,posX,posY,paint);
